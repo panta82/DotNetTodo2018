@@ -4,6 +4,7 @@
     <e p="C:\Users\Ivan\.Rider2018.2\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\Ivan\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_Todo.-1755589455.00" t="ExcludeRecursive" />
     <e p="K:\dev\sandbox\dotnet\Todo" t="IncludeFlat">
+      <e p=".git\info\exclude" t="IncludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="Todo.sln" t="IncludeFlat" />
       <e p="WebUI" t="IncludeRecursive">
