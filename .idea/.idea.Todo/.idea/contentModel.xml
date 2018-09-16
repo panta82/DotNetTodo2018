@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Ivan\.Rider2018.2\config\consoles\db" t="IncludeRecursive" />
-    <e p="C:\Users\Ivan\.Rider2018.2\config\extensions" t="IncludeRecursive" />
-    <e p="C:\Users\Ivan\.Rider2018.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Ivan\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_Todo.-1755589455.00" t="ExcludeRecursive" />
-    <e p="K:\dev\sandbox\dotnet\Todo" t="IncludeFlat">
-      <e p=".git\info\exclude" t="IncludeRecursive" />
-      <e p="packages" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/.Rider2017.3/system/resharper-host/local/Transient/ReSharperHost/v11/SolutionCaches/_Todo.1109679862.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="Todo.sln" t="IncludeFlat" />
       <e p="WebUI" t="IncludeRecursive">
-        <e p="app.db" t="Include" />
-        <e p="appsettings.Development.json" t="Include" />
-        <e p="appsettings.json" t="Include" />
         <e p="Areas" t="Include">
           <e p="Identity" t="Include">
             <e p="Pages" t="Include">
@@ -20,7 +12,6 @@
             </e>
           </e>
         </e>
-        <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
           <e p="HomeController.cs" t="Include" />
           <e p="TodoController.cs" t="Include" />
@@ -28,8 +19,10 @@
         <e p="Data" t="Include">
           <e p="ApplicationDbContext.cs" t="Include" />
           <e p="Migrations" t="Include">
-            <e p="00000000000000_CreateIdentitySchema.cs" t="Include" />
             <e p="00000000000000_CreateIdentitySchema.Designer.cs" t="Include" />
+            <e p="00000000000000_CreateIdentitySchema.cs" t="Include" />
+            <e p="20180916182151_Items.Designer.cs" t="Include" />
+            <e p="20180916182151_Items.cs" t="Include" />
             <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
           </e>
         </e>
@@ -38,13 +31,6 @@
           <e p="TodoItem.cs" t="Include" />
           <e p="TodoViewModel.cs" t="Include" />
         </e>
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netcoreapp2.1" t="Include">
-              <e p="WebUI.AssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
-        </e>
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />
@@ -52,11 +38,10 @@
         <e p="Services" t="Include">
           <e p="FakeTodoItemService.cs" t="Include" />
           <e p="ITodoItemService.cs" t="Include" />
+          <e p="TodoItemService.cs" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
         <e p="Views" t="Include">
-          <e p="_ViewImports.cshtml" t="Include" />
-          <e p="_ViewStart.cshtml" t="Include" />
           <e p="Home" t="Include">
             <e p="About.cshtml" t="Include" />
             <e p="Contact.cshtml" t="Include" />
@@ -64,17 +49,30 @@
             <e p="Privacy.cshtml" t="Include" />
           </e>
           <e p="Shared" t="Include">
+            <e p="Error.cshtml" t="Include" />
             <e p="_CookieConsentPartial.cshtml" t="Include" />
             <e p="_Layout.cshtml" t="Include" />
             <e p="_LoginPartial.cshtml" t="Include" />
             <e p="_ValidationScriptsPartial.cshtml" t="Include" />
-            <e p="Error.cshtml" t="Include" />
           </e>
           <e p="Todo" t="Include">
             <e p="Index.cshtml" t="Include" />
           </e>
+          <e p="_ViewImports.cshtml" t="Include" />
+          <e p="_ViewStart.cshtml" t="Include" />
         </e>
         <e p="WebUI.csproj" t="IncludeRecursive" />
+        <e p="app.db" t="Include" />
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.1" t="Include">
+              <e p="WebUI.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="wwwroot" t="Include">
           <e p="css" t="Include">
             <e p="site.css" t="Include" />
@@ -93,6 +91,7 @@
           <e p="lib" t="Include">
             <e p="bootstrap" t="Include">
               <e p=".bower.json" t="Include" />
+              <e p="LICENSE" t="Include" />
               <e p="dist" t="Include">
                 <e p="css" t="Include">
                   <e p="bootstrap-theme.css" t="Include" />
@@ -117,36 +116,36 @@
                   <e p="npm.js" t="Include" />
                 </e>
               </e>
-              <e p="LICENSE" t="Include" />
             </e>
             <e p="jquery" t="Include">
               <e p=".bower.json" t="Include" />
+              <e p="LICENSE.txt" t="Include" />
               <e p="dist" t="Include">
                 <e p="jquery.js" t="Include" />
                 <e p="jquery.min.js" t="Include" />
                 <e p="jquery.min.map" t="Include" />
               </e>
-              <e p="LICENSE.txt" t="Include" />
             </e>
             <e p="jquery-validation" t="Include">
               <e p=".bower.json" t="Include" />
+              <e p="LICENSE.md" t="Include" />
               <e p="dist" t="Include">
                 <e p="additional-methods.js" t="Include" />
                 <e p="additional-methods.min.js" t="Include" />
                 <e p="jquery.validate.js" t="Include" />
                 <e p="jquery.validate.min.js" t="Include" />
               </e>
-              <e p="LICENSE.md" t="Include" />
             </e>
             <e p="jquery-validation-unobtrusive" t="Include">
               <e p=".bower.json" t="Include" />
+              <e p="LICENSE.txt" t="Include" />
               <e p="jquery.validate.unobtrusive.js" t="Include" />
               <e p="jquery.validate.unobtrusive.min.js" t="Include" />
-              <e p="LICENSE.txt" t="Include" />
             </e>
           </e>
         </e>
       </e>
+      <e p="packages" t="ExcludeRecursive" />
     </e>
   </component>
 </project>
