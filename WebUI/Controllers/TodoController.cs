@@ -20,5 +20,19 @@ namespace WebUI.Controllers {
 
 			return View(model);
 		}
+
+		[ValidateAntiForgeryToken]
+		public async Task<IActionResult> AddItem(TodoItem newItem) {
+			if (!ModelState.IsValid) {
+				return RedirectToAction("Index");
+			}
+
+			var ok = await _todoItemService.AddItemAsync(newItem);
+			if (!ok) {
+				return BadRequest("Could not add item");
+			}
+
+			return RedirectToAction("Index");
+		}
 	}
 }

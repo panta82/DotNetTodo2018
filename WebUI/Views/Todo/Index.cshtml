@@ -31,6 +31,6 @@
 	</table>
 	
 	<div class="panel-footer add-item-form">
-		<!-- Add stuff -->
+		@await Html.PartialAsync("AddItemPartial", new TodoItem())
 	</div>
 </div>
