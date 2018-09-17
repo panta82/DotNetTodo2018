@@ -33,9 +33,13 @@ namespace WebUI {
 			services.AddDbContext<ApplicationDbContext>(options =>
 				options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
 
-			services.AddDefaultIdentity<IdentityUser>()
-				.AddRoles<IdentityRole>()
-				.AddRoleManager<RoleManager<IdentityRole>>()
+			services.AddIdentity<IdentityUser, IdentityRole>()
+				.AddDefaultUI()
+
+				// TODO: Broken shit: https://github.com/aspnet/Identity/issues/1813
+				//.AddRoles<IdentityRole>()
+				//.AddRoleManager<RoleManager<IdentityRole>>()
+
 				.AddDefaultTokenProviders()
 				.AddEntityFrameworkStores<ApplicationDbContext>();
 
