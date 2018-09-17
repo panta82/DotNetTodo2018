@@ -30,5 +30,15 @@ namespace WebUI.Services {
 
 			return saveResult == 1;
 		}
+
+		public async Task<bool> MarkDoneAsync(Guid id) {
+			var item = await _context.Items.FindAsync(id);
+			if (item == null) {
+				return false;
+			}
+
+			item.IsDone = true;
+			return await _context.SaveChangesAsync() == 1;
+		}
 	}
 }

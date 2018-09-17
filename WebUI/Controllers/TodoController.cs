@@ -1,3 +1,4 @@
+using System;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using WebUI.Models;
@@ -30,6 +31,20 @@ namespace WebUI.Controllers {
 			var ok = await _todoItemService.AddItemAsync(newItem);
 			if (!ok) {
 				return BadRequest("Could not add item");
+			}
+
+			return RedirectToAction("Index");
+		}
+
+		[ValidateAntiForgeryToken]
+		public async Task<IActionResult> MarkDone(Guid id) {
+			if (id == Guid.Empty) {
+				return RedirectToAction("Index");
+			}
+
+			var ok = await _todoItemService.MarkDoneAsync(id);
+			if (!ok) {
+				return BadRequest("Could not mark item done");
 			}
 
 			return RedirectToAction("Index");
