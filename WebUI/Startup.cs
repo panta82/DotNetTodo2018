@@ -31,9 +31,12 @@ namespace WebUI {
 			});
 
 			services.AddDbContext<ApplicationDbContext>(options =>
-				options.UseSqlite(
-					Configuration.GetConnectionString("DefaultConnection")));
+				options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
+
 			services.AddDefaultIdentity<IdentityUser>()
+				.AddRoles<IdentityRole>()
+				.AddRoleManager<RoleManager<IdentityRole>>()
+				.AddDefaultTokenProviders()
 				.AddEntityFrameworkStores<ApplicationDbContext>();
 
 			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
